@@ -1,0 +1,68 @@
+{
+    "name": "chareice/laravel-aliyun-direct-mail",
+    "description": "Aliyun Direct Mail Api for Laravel",
+    "keywords": [
+        "Chareice",
+        "laravel",
+        "laravel-aliyun-direct-mail"
+    ],
+    "homepage": "https://github.com/chareice/laravel-aliyun-direct-mail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chareice",
+            "email": "chareice@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "alibabacloud/darabonba-openapi": "^0.2.6",
+        "alibabacloud/dm-20151123": "1.0.4",
+        "illuminate/contracts": "^9.0",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chareice\\LaravelAliyunDirectMail\\": "src",
+            "Chareice\\LaravelAliyunDirectMail\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chareice\\LaravelAliyunDirectMail\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chareice\\LaravelAliyunDirectMail\\LaravelAliyunDirectMailServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAliyunDirectMail": "Chareice\\LaravelAliyunDirectMail\\Facades\\LaravelAliyunDirectMail"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
